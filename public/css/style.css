@@ -1,0 +1,221 @@
+main {
+    margin-bottom: 2rem;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.my-sidebar {
+    grid-area: aside;
+}
+.my-article {
+    grid-area: article;
+}
+@media (max-width: 573px) {
+    main#login-content {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    main#register-content {
+        display: block !important;
+    }
+    section.content {
+        display: block !important;
+        visibility: visible;
+    }
+    .my-sidebar:not(.show) {
+        display: none;
+        visibility: none;
+    }
+}
+
+/* ================================ ADMIN ===================================*/
+
+#header {
+    position: relative;
+    margin-top: 100px;
+}
+.mynav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 69px;
+    z-index: 999;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.12);
+}
+.mynav > .mynav-nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    top: 13px;
+}
+
+/* home */
+
+.my-card-pict {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    flex-flow: column nowrap;
+}
+.my-card-profile {
+    position: relative;
+    height: 0;
+    padding-bottom: 100%;
+}
+.my-card-profile > .img-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.my-card-profile > .img-wrapper > img {
+    object-fit: cover;
+}
+.my-card-desc {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 0 0.5rem 0.5rem;
+    overflow: hidden;
+}
+.my-card-desc > h3,
+.my-card-desc p {
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+}
+.my-all-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    margin-bottom: 3rem;
+}
+.my-all-menu > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.my-statistics {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.1);
+}
+.my-statistics > div > .my-statistics-likes,
+.my-statistics > div > .my-statistics-dislikes {
+    width: 100%;
+    height: 10px;
+    border-radius: 12px;
+    background: #c0c0c0;
+    overflow: hidden;
+}
+.my-statistics-likes > div {
+    background: #2376e5;
+    width: 37%;
+    height: 100%;
+}
+.my-statistics-dislikes > div {
+    background: #ff3939;
+    width: 5.9996866%;
+    height: 100%;
+}
+footer#my-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+}
+main#login-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
+    padding: 1rem;
+    background: url(../img/sabo-ace.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+main#login-content > form {
+    grid-area: 2 / 3;
+    border: none;
+    border-radius: 12px;
+}
+main#register-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: ". . content";
+    /* height: 100vh; */
+    padding: 1rem;
+    background: url(../img/sabo-ace.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+main#register-content > div {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main#register-content > div > form {
+    border: none;
+    border-radius: 12px;
+}
+.my-profile {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ================================ USER ===================================*/
+
+section.content {
+    display: grid;
+    grid-template-areas: "aside article";
+    grid-template-columns: 1.5fr 4fr;
+    grid-auto-rows: auto;
+    grid-gap: 2rem;
+    /* min-height: 100vh; */
+    padding-top: 3rem;
+}
+#myCarouselNews {
+    padding-top: 3rem;
+    height: 300px;
+}
+#myCarouselNews > .carousel.slide {
+    overflow: hidden;
+    border-radius: 12px;
+}
