@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 // controllers
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,7 @@ Route::get('/admin/view-posts', [AdminController::class, 'viewMyPosts']);
 Route::get('/admin/view-posts/{id}', [AdminController::class, 'viewMySinglePost']);
 
 
-Route::get('/', function () {
-    return view('home', [ 'arr' => ['a','b','c']]);
-});
+Route::get('/', [UserController::class, 'index']);
+Route::get('/posts', [UserController::class, 'viewArticles']);
+Route::get('/posts/{slug}', [UserController::class, 'viewArticle']);
 

@@ -199,6 +199,9 @@ main#register-content > div > form {
     border-radius: 12px;
     box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.1);
 }
+.my-articles-card {
+    border: 1px solid #eaeaea;
+}
 
 /* ================================ USER ===================================*/
 

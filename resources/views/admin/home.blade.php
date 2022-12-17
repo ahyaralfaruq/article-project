@@ -42,9 +42,6 @@
             </div>
             <span>5%</span>
          </div>
-         <div class="text-right">
-            <a href="#" class="btn btn-primary">see statistics</a>
-         </div>
       </div>
       
 

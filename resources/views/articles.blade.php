@@ -1,26 +1,11 @@
-@extends('admin.index')
+@extends('welcome')
 
-@section('title','View Article')
-
+@section('title', 'News')
 @section('content')
-<section class="content">
-   <aside class="my-sidebar">
-      <div class="my-card-pict">
-         <div class="my-card-profile">
-            <div class="img-wrapper">
-               <img src={{ asset("../img/asd.png") }} alt="">
-            </div>
-         </div>
-         <div class="my-card-desc">
-            <h3 class="h3 mb-3">Muhammad Ahyar</h3>
-            <p class="text-muted">ahyaralfaruq97@gmail.com</p>
-         </div>
-      </div>
-   </aside>
-   <article class="my-article">
-      @foreach($array as $data)
-      <a href="/admin/view-posts/{{$data}}" class="text-dark cursor-pointer text-decoration-none">
-         <div class="my-articles-card mb-5">
+   <div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-12 pt-5">
+      <!-- foreach here -->
+      <a href="posts/judul-post-1" class="text-dark cursor-pointer text-decoration-none">
+         <div class="my-articles-card mb-3">
             <div class="my-articles-pict">
                <div class="my-articles-img-wrapper">
                   <img src={{ asset("../img/avatar.png") }} alt="">
@@ -43,6 +28,5 @@
             </div>
          </div>
       </a>
-      @endforeach
-   </article>
+   </div>
 @endsection

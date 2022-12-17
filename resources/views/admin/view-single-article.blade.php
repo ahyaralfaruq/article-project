@@ -24,7 +24,7 @@
                   <img src={{ asset("../img/avatar.png") }} alt="">
                </div>
             </div>
-            <div class="my-articles-desc">
+            <div class="my-articles-desc pl-2 pb-2 pt-4">
                <h4 class="h4">Judul artikel</h4>
                <p class="text-muted">update tanggal</p>
                <p class="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim dicta animi error cupiditate illum quidem voluptatum eveniet veniam assumenda sed, labore nobis odio eaque culpa! Officiis incidunt nam odit aspernatur!</p>

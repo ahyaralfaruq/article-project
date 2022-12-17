@@ -7,9 +7,9 @@
    <title>Admin Panel | @yield('title')</title>
 
    <!-- bootstrap css -->
-   <link rel="stylesheet" href="css/all.min.css">
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href={{ asset('css/all.min.css') }}>
+   <link rel="stylesheet" href={{ asset('css/bootstrap.min.css') }}>
+   <link rel="stylesheet" href={{ asset('css/style.css') }}>
 </head>
 <body>
    <header id="header">
@@ -23,22 +23,16 @@
             <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
                <ul class="navbar-nav flex-shrink-0">
                   <li class="nav-item active">
-                     <a class="nav-link" href="#">
+                     <a class="nav-link" href="/">
                         <!-- <i class="fas fa-home"></i> -->
                         Home
                      </a>
                   </li>
                   <li class="nav-item">
-                        <a class="nav-link" href="#">Articles</a>
+                        <a class="nav-link" href="/posts">Articles</a>
                   </li>
                   <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">About us</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
-                     </a>
+                        <a class="nav-link" href="/about">About us</a>
                   </li>
                </ul>
                <form class="form-inline my-2 my-lg-0 mr-3 w-100">
@@ -52,40 +46,17 @@
       </div>
    </header>
    
-   <main class="container" id="main">
-      <section id="myCarouselNews" class="position-relative w-100">
-         <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel">
-            <div class="carousel-inner h-100">
-               <div class="carousel-item h-100 active">
-                  <img src="../img/asd.png" class="d-block w-100" alt="...">
-               </div>
-               <div class="carousel-item h-100">
-                  <img src="img/avatar.png" class="d-block w-100" alt="...">
-               </div>
-               <div class="carousel-item h-100">
-                  <img src="img/sabo-ace.jpg" class="d-block w-100" alt="...">
-               </div>
-               <div class="carousel-item h-100">
-                  <img src="img/sasori-family.png" class="d-block w-100" alt="...">
-               </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="sr-only">Next</span>
-            </a>
-         </div>
-      </section>
-      
+   <main class="container" id="main">      
       @yield('content')
    </main>
 
+   <footer id="my-footer" class="bg-light">
+      <p class="p text-bold">Alright Reserved &copy; 2022</p>
+   </footer>
+
    <!-- bootstrap js -->
-   <script src="js/jquery-3.4.1.min.js"></script>
-   <script src="js/all.min.js"></script>
-   <script src="js/bootstrap.min.js"></script>
+   <script src={{ asset('js/jquery-3.4.1.min.js') }}></script>
+   <script src={{ asset('js/all.min.js') }}></script>
+   <script src={{ asset('js/bootstrap.min.js') }}></script>
 </body>
 </html>
