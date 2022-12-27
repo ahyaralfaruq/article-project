@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>Admin Panel | @yield('title')</title>
 
    <!-- bootstrap css -->
@@ -41,10 +41,33 @@
                      <i class="fas fa-search"></i>
                   </button>
                </form>
+               <div class="my-modal-category ml-2 mr-2">
+                  <button type="button" class="btn bg-white d-block w-100" data-toggle="modal" data-target="#modal_kategori" style="border: 1px solid #03ac0e; outline: none;">
+                     kategori
+                  </button>
+               </div>
             </div>
          </nav>
       </div>
    </header>
+
+   <div class="modal fade" id="modal_kategori" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="min-width: 100%; margin: 0;">
+	    	<div class="modal-content" style="min-height: 100%; margin: 0 2vw;">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Kategori</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="my-list-category">
+                  <a href="#" class="text-center text-decoration-none cursor-pointer">category 1</a>
+               </div>
+            </div>
+         </div>
+      </div>
+	</div>
    
    <main class="container" id="main">      
       @yield('content')

@@ -29,5 +29,6 @@ Route::get('/admin/view-posts/{id}', [AdminController::class, 'viewMySinglePost'
 
 Route::get('/', [UserController::class, 'index']);
 Route::get('/posts', [UserController::class, 'viewArticles']);
-Route::get('/posts/{slug}', [UserController::class, 'viewArticle']);
+Route::get('/posts/{post:slug}', [UserController::class, 'viewArticle']);
+Route::get('/author/{author:username}', [UserController::class, 'viewAuthor']);
 
